@@ -3,6 +3,7 @@ package vn.edu.poly.appbookmanager.activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -100,7 +101,8 @@ public class ActivityHome extends AppCompatActivity
         }
 
         else if(id==R.id.nav_dangxuat){
-            finish();
+            Toast.makeText(this, "Bạn đã đăng xuất!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
